@@ -30,10 +30,13 @@ public class KeyRemapService extends AccessibilityService {
 
     private static final Map<Integer, Integer> KEY_MAP = new HashMap<>();
     static {
-        // BTN_A (fisico) -> arriva come KEYCODE_BUTTON_A -> tradotto in KEYCODE_ENTER
-        KEY_MAP.put(KeyEvent.KEYCODE_BUTTON_A, KeyEvent.KEYCODE_ENTER);
+        // BTN_MODE (tasto "FN", sopra Select/Start) -> arriva come KEYCODE_BUTTON_MODE
+        // -> tradotto in KEYCODE_ENTER. Da riconfermare con:
+        //    adb shell getevent -l   (premi FN, verifica che compaia BTN_MODE)
+        KEY_MAP.put(KeyEvent.KEYCODE_BUTTON_MODE, KeyEvent.KEYCODE_ENTER);
 
         // Esempio per aggiungere altri tasti dopo averli verificati:
+        // KEY_MAP.put(KeyEvent.KEYCODE_BUTTON_A, KeyEvent.KEYCODE_ENTER);
         // KEY_MAP.put(KeyEvent.KEYCODE_BUTTON_B, KeyEvent.KEYCODE_BACK);
     }
 
