@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.r36s.keyremap'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.r36s.keyremap"
+        // minSdk 19 = Android 4.4 KitKat, la versione esatta della R36S PS202
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}

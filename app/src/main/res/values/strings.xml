@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">R36S Key Remap</string>
+    <string name="accessibility_service_description">Rimappa il tasto A del pad su ENTER, configurato per R36S PS202 (MT6572, Android 4.4.2)</string>
+    <string name="instructions">R36S Key Remap\n\nMapping attivo:\nBTN_A (tasto A) -> KEYCODE_ENTER\n\nPassi necessari dopo l\'installazione:\n\n1. Concedi il permesso INJECT_EVENTS via ADB:\n   adb shell pm grant com.r36s.keyremap android.permission.INJECT_EVENTS\n\n2. Premi il pulsante sotto per attivare il Servizio di Accessibilità\n\n3. Trova "R36S Key Remap" nell\'elenco e attivalo</string>
+    <string name="open_accessibility_settings">Apri Impostazioni Accessibilità</string>
+</resources>
